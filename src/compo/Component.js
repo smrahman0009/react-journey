@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import StateEx from './StateEx';
 import PropEx from './PropEx';
+import DestEx from './DestEx';
 
 const Component = ()=>{
     const usName = [
@@ -24,21 +25,25 @@ const Component = ()=>{
    return (
         <div>
             <h2>React Examples</h2>
-            <StateEx/>
-            <br/>
+            {/* -----------------__State__Example__-------------- */}
+            {/* <StateEx/> */}
+            {/* -------------------__End__State__Example__------------- */}
+            {/* ----------------__Prop__Example__-------------- */}
             {
-                usName.map((president)=>{
-                    const {firstName,lastName} = president
+                // usName.map((president)=>{
+                //     const {firstName,lastName} = president
 
-                    return (
-                        <PropEx firstName={firstName} lastName={lastName}/>
-                    )
-                })
+                //     return (
+                //         <PropEx firstName={firstName} lastName={lastName}/>
+                //     )
+
+                // })
             }
-            {/* <PropEx firstName="Tom" lastName="Hanks"/>
-            <PropEx firstName="Barak" lastName="Obama"/>
-            <PropEx firstName="Joe" lastName="Biden"/>
-            <PropEx firstName="Ronald" lastName="regan"/> */}
+           {/* --------------------__End_Prop__Example__------------------- */}
+            {
+               
+                <DestEx/>
+            }
         </div>
         
     )
