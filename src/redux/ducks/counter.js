@@ -6,7 +6,7 @@ export const increment=()=>({type:INCREMENT});
 export const decrement=()=>({type:DECREMENT});
 
 const initialState={
-    count:9
+    count:0
 };
 
 

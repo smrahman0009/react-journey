@@ -8,10 +8,17 @@ import {useSelector } from 'react-redux';
 
 function App() {
   const count = useSelector((state)=>state.counter.count)
+  const voterList = ["Talha Chowdhury","Anik Sarkar","Imam Azam","Sudipta Ranjan"]
+  
   return (
       <div>
-        <h1>Counter {count}</h1>
-      <Counter/>
+        <h1>Total Vote{count}</h1>
+        {
+          voterList.map(voter=>{
+            return  <Counter name={voter}/>
+          })
+        }
+       
       </div>
   );
 }
