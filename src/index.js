@@ -3,18 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import index from "./js/index";
-import {allReducers} from "./redux/reducers";
-import {createStore} from "redux";
-import {Provider} from "react-redux";
+import { Provider } from 'react-redux';
+import store from "../src/redux/configureStore";
 
-
-const store = createStore(allReducers,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
-    <Provider store={store}>
-      <App/>
-    </Provider>,
+  <Provider store={store}>
+    <App/>
+  </Provider>,
   document.getElementById('root')
 );
 
